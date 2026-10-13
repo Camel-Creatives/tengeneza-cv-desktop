@@ -1,0 +1,24 @@
+# Template Library Visual QA
+
+## Phase 1 — 2026-08-21
+
+| Template | Render checked | Finding | Required corrective action |
+|---|---:|---|---|
+| Creative Portfolio | Imani Okello PDF, pages 1–2 | The content layout is balanced and the portrait/left-rail treatment is clear, but the `min-height:297mm` left rail causes a second blank page with a small dark continuation. | Reduce the rail height so the document remains a clean one-page CV. |
+| Tech Product | David Mwangi PDF, page 1 | The dense navy header, cyan photo ring, product-context strip, and content spacing are readable and well balanced. | No corrective action needed. |
+| Finance Audit | Joyce Nyoni PDF, page 1 | The portrait and ledger-inspired hierarchy work, but the two-column work-history grid places dates, employer lines, and bullet lists too tightly, creating visibly overlapping text. | Rework each role into a conventional header followed by an indented bullet block; retain ledger character through rules and labels rather than grid-positioning individual fields. |
+| Finance Audit (corrected) | Joyce Nyoni PDF, page 1 | The revised audit-ledger role sequence is clean, scannable, and keeps the compact one-page structure without text collisions. | No further corrective action needed. |
+| Legal Chambers | Peter Kato PDF, page 1 | The centered formal masthead, serif system, restrained photo, and annotated practice-area rail read as a credible legal curriculum vitae. | No corrective action needed. |
+| Clinical Care | Dr Mariam Said PDF, page 1 | The clinical credential strip, cool evidence hierarchy, and carefully separated competence rail make care qualifications immediately scannable. Portrait treatment is professional and the body remains comfortably readable. | No corrective action needed. |
+| Educator Classroom | Grace Wambui PDF, page 1 | The learning-portfolio label, note-like gold rules, informal portrait framing, and grouped teaching evidence create a distinct but professional education CV. | No corrective action needed. |
+| Sales Growth | Kelvin Otieno PDF, page 1 | The warm commercial hero, pipeline scorecard, quantified bullet sequence, and contrast-heavy skill bar make results easy to scan without crowding the page. | No corrective action needed. |
+| Field Operations | Asha Mollel PDF, page 1 | The route-line markers, site-readiness rail, gold utility accents, and practical single-page chronology create a visibly distinct field-operations document. | No corrective action needed. |
+| Consulting Strategy | Samuel Njoroge PDF, page 1 | The engagement framing, capability matrix, understated advisory palette, and carefully bounded client lens produce a credible consulting document with enough whitespace for recommendations. | No corrective action needed. |
+| Engineering Blueprint | Elias Temba PDF, page 1 | The blueprint grid, technical drawing surface, specification strip, and engineering record modules are distinct and legible while retaining a professional single-page format. | No corrective action needed. |
+| Public Service | Ruth Namusoke PDF, page 1 | The formal policy masthead, restrained burgundy hierarchy, mandate rail, and policy-chronology composition read as credible public-sector application material. | No corrective action needed. |
+| Nonprofit Impact | Saida Hassan PDF, page 1 | The community-outcomes banner, visible impact promise, green evidence system, and partner-focused metric rail make programme leadership outcomes very clear. | No corrective action needed. |
+| Graduate Launch | Brian Lema PDF, page 1 | The high-whitespace graduate hierarchy, analytical-potential signal, compact project-style work modules, and warm education card make early-career evidence feel credible and clear. | No corrective action needed. |
+| Skilled Trades | Joseph Mushi PDF, page 1 | The safety-first header, highly visible hazard stripe, technical-ticket rail, and field chronology create a practical, professional skilled-trades layout. | No corrective action needed. |
+| Remote Async | Nia Achieng PDF, page 1 | The constrained border, asynchronous-work label, timezone panel, and lavender collaboration cues make this template clearly different while keeping remote evidence scannable. | No corrective action needed. |
+| Creative Producer | Zawadi Mrema PDF, page 1 | The slate masthead, warm production line, and editorial system convey campaign-production work effectively, but the credits-style two-column experience grid causes role/date/employer text to collide. | Rework the experience blocks into an indented sequential production-credit treatment, retaining the slate hierarchy without grid-positioning individual fields. |
+| Creative Producer (corrected) | Zawadi Mrema PDF, page 1 | The sequential production-credit treatment now preserves the slate-led identity and gives every role, employer, date, and achievement its own clear visual space. | No further corrective action needed. |

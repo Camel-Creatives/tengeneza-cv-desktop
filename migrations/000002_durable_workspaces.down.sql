@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS daily_export_usage;
+DROP INDEX IF EXISTS cv_exports_unique_artifact_idx;
+DROP INDEX IF EXISTS cv_exports_user_day_idx;
+ALTER TABLE cv_exports DROP COLUMN IF EXISTS cached;
+ALTER TABLE cv_exports DROP COLUMN IF EXISTS byte_size;
+ALTER TABLE cv_exports DROP COLUMN IF EXISTS object_key;
+ALTER TABLE cv_exports DROP COLUMN IF EXISTS local_export_date;
+ALTER TABLE cv_exports DROP COLUMN IF EXISTS user_id;
+DROP INDEX IF EXISTS users_external_subject_unique;
+ALTER TABLE users DROP COLUMN IF EXISTS external_subject;
+ALTER TABLE users DROP COLUMN IF EXISTS profile_photo_url;
+ALTER TABLE users ALTER COLUMN full_name DROP DEFAULT;

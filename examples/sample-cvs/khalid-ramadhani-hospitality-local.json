@@ -1,0 +1,19 @@
+{
+  "title": "Khalid Ramadhani — Hospitality CV",
+  "document_style": "cv",
+  "template_id": "hospitality_local",
+  "target_region": "eac",
+  "language": "en",
+  "content": {
+    "personal": {"full_name":"Khalid Ramadhani","headline":"Hotel Front Office Supervisor","email":"khalid.ramadhani@example.test","phone":"+255686455099","location":"Zanzibar, Tanzania","linkedin_url":"https://linkedin.com/in/khalid-ramadhani-demo","portfolio_url":null,"photo_url":null},
+    "summary":"Hotel front office supervisor with 8 years of experience coordinating reception teams, reservations, concierge service, and guest recovery in high-occupancy beach properties.",
+    "experience":[
+      {"title":"Front Office Supervisor","employer":"Ocean Gate Resort — fictional","location":"Zanzibar, Tanzania","start_date":"2021-08","end_date":null,"is_current":true,"bullets":["Supervised 10 reception colleagues during 78% average annual occupancy, sustaining a 96% check-in accuracy rate.","Implemented daily arrival briefings that reduced missed airport transfers by 42%.","Resolved guest-service escalations within 25 minutes on average, supporting a 4.7/5 review trend."]},
+      {"title":"Reservations Agent","employer":"Stone Town Retreats — fictional","location":"Zanzibar, Tanzania","start_date":"2016-03","end_date":"2021-07","is_current":false,"bullets":["Processed 2,800 annual room reservations across three partner properties.","Maintained booking records and payment confirmations with 99% monthly reconciliation accuracy."]}
+    ],
+    "education":[{"institution":"Zanzibar Institute of Tourism and Development","credential":"Diploma in Hotel Management","classification_local":"Merit","start_date":"2013-09","end_date":"2015-11","location":"Zanzibar, Tanzania"}],
+    "certifications":[{"name":"Hospitality Guest Safety — demonstration","issuer":"Tanzania Red Cross","year":"2024"}],
+    "skills":{"hard_skills":["Front Office Operations","Reservations","Guest Recovery","PMS","Cash Reconciliation"],"soft_skills":["Team Supervision","Service Communication"],"languages":[{"language":"English","proficiency":"Fluent (professional)"},{"language":"Swahili","proficiency":"Native"}]},
+    "settings":{"show_photo":false,"show_referees":true}
+  }
+}

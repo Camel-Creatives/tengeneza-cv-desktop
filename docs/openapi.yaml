@@ -1,0 +1,28 @@
+openapi: 3.1.0
+info:
+  title: Tengeneza CV Platform API
+  version: 1.0.0
+  description: This source-controlled contract is embedded and served at /docs/openapi.yaml by the API process.
+servers:
+  - url: https://api.tengenezacv.online
+  - url: http://localhost:8080
+paths:
+  /healthz: { get: { summary: Liveness probe, responses: { '200': { description: Service is alive } } } }
+  /readyz: { get: { summary: Readiness probe, description: Checks PostgreSQL, Redis, and object storage., responses: { '200': { description: Dependencies are ready }, '503': { description: Required dependency unavailable } } } }
+  /auth/signup: { post: { summary: Legacy signup endpoint; returns CAMELACCOUNTS_REQUIRED, responses: { '201': { description: Created } } } }
+  /auth/otp/verify: { post: { summary: Legacy OTP endpoint; returns CAMELACCOUNTS_REQUIRED, responses: { '200': { description: Authenticated } } } }
+  /auth/otp/resend: { post: { summary: Legacy OTP endpoint; returns CAMELACCOUNTS_REQUIRED, responses: { '200': { description: Sent } } } }
+  /auth/login/password: { post: { summary: Legacy password endpoint; returns CAMELACCOUNTS_REQUIRED, responses: { '200': { description: Authenticated } } } }
+  /auth/admin/login: { post: { summary: Admin email/password login, responses: { '200': { description: Superadmin session }, '401': { description: Invalid credentials }, '429': { description: Rate limited }, '503': { description: Admin login is not configured } } } }
+  /me: { get: { summary: Read profile }, patch: { summary: Update profile } }
+  /me/wallet: { get: { summary: Read server-authoritative wallet balances } }
+  /templates: { get: { summary: List active CV templates and lock state } }
+  /cvs: { get: { summary: List CVs }, post: { summary: Create CV } }
+  /cvs/{id}: { get: { summary: Get CV }, patch: { summary: Patch CV and version it }, delete: { summary: Archive CV } }
+  /cvs/{id}/duplicate: { post: { summary: Duplicate CV } }
+  /cvs/{id}/versions: { get: { summary: List immutable CV versions } }
+  /cvs/{id}/agent/ats-score: { post: { summary: Score deterministic ATS lint } }
+  /cvs/{id}/agent/autofill-section: { post: { summary: Draft an ATS-safe CV section with Tengeneza AI } }
+  /cvs/{id}/export: { post: { summary: Create or reuse a PDF, DOCX, or CSV export; limited to five new artifacts per Tanzania-local day } }
+  /billing/plans: { get: { summary: List TZS pricing configuration } }
+  /webhooks/mailafrica: { post: { summary: Receive HMAC verified inbound email events } }

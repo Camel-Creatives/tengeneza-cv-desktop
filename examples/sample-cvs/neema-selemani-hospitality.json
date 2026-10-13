@@ -1,0 +1,57 @@
+{
+  "title": "Neema Selemani — Hospitality Operations CV",
+  "document_style": "cv",
+  "template_id": "visual_local",
+  "target_region": "eac",
+  "language": "en",
+  "content": {
+    "personal": {
+      "full_name": "Neema Selemani",
+      "headline": "Hospitality Operations Supervisor",
+      "email": "neema.selemani@example.test",
+      "phone": "+255689987654",
+      "location": "Zanzibar, Tanzania",
+      "linkedin_url": "https://linkedin.com/in/neema-selemani-demo",
+      "portfolio_url": null,
+      "photo_url": "/uploads/profiles/tengeneza-neema-portrait.jpg",
+      "nationality_visible": false
+    },
+    "summary": "Hospitality operations supervisor with 7 years of experience coordinating guest services, reservations, and frontline teams for boutique tourism properties in Zanzibar. Known for calm service recovery and practical staff development.",
+    "experience": [
+      {
+        "id": "exp_1",
+        "employer": "Coastal Moon Lodge — fictional",
+        "title": "Guest Services Supervisor",
+        "location": "Zanzibar, Tanzania",
+        "start_date": "2021-06",
+        "end_date": null,
+        "is_current": true,
+        "bullets": [
+          "Managed a 12-person guest-services rota for a 42-room lodge, raising quarterly guest satisfaction from 4.3 to 4.7 out of 5.",
+          "Coordinated airport transfers and excursion schedules for 1,800 annual guests, reducing same-day booking errors by 31%.",
+          "Trained 9 new team members on service-recovery standards, improving resolution of guest issues within 30 minutes."
+        ]
+      },
+      {
+        "id": "exp_2",
+        "employer": "Safari Coast Travel — fictional",
+        "title": "Reservations Officer",
+        "location": "Zanzibar, Tanzania",
+        "start_date": "2017-02",
+        "end_date": "2021-05",
+        "is_current": false,
+        "bullets": [
+          "Processed 3,200 annual reservations across 5 partner properties, maintaining a 98% confirmation accuracy rate.",
+          "Created bilingual guest-arrival briefs for 40 weekly bookings, reducing check-in clarification calls by 25%."
+        ]
+      }
+    ],
+    "education": [{ "id": "edu_1", "institution": "Zanzibar Institute of Tourism and Development", "credential": "Diploma in Hospitality Management", "classification_local": "Merit", "classification_international_equiv": "Professional diploma", "start_date": "2014-09", "end_date": "2016-11", "location": "Zanzibar, Tanzania" }],
+    "certifications": [{ "id": "cert_1", "name": "First Aid and Guest Safety — demonstration", "issuer": "Tanzania Red Cross", "year": "2024" }],
+    "skills": { "hard_skills": ["Reservations Management", "Guest Service Recovery", "Front Office Operations", "Tour Coordination", "Microsoft Excel"], "soft_skills": ["Team Leadership", "Cross-Cultural Communication"], "languages": [{ "language": "English", "proficiency": "Fluent (professional)" }, { "language": "Swahili", "proficiency": "Native" }] },
+    "projects": [],
+    "volunteering": [{ "id": "vol_1", "organization": "Zanzibar Beach Clean-up — fictional", "role": "Volunteer Coordinator", "description": "Coordinated 25 volunteers for quarterly shoreline collection events." }],
+    "referees": [],
+    "settings": { "show_photo": true, "show_referees": true, "date_format": "MMM YYYY", "page_limit_hint": 2 }
+  }
+}

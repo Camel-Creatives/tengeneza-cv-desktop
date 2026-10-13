@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "tengeneza-cv-desktop",
+  "outputfilename": "TengenezaCV",
+  "frontend:install": "pnpm install --frozen-lockfile",
+  "frontend:build": "pnpm vite:build",
+  "frontend:dev:watcher": "pnpm vite:dev",
+  "frontend:dev:serverUrl": "http://localhost:3000",
+  "author": {
+    "name": "Tengeneza CV",
+    "email": ""
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Amina Juma — Finance & Compliance CV",
+  "document_style": "resume",
+  "template_id": "ats_classic",
+  "target_region": "eac",
+  "language": "en",
+  "content": {
+    "personal": {
+      "full_name": "Amina Juma",
+      "headline": "Finance & Compliance Professional",
+      "email": "amina.juma@example.test",
+      "phone": "+255712345678",
+      "location": "Dar es Salaam, Tanzania",
+      "linkedin_url": "https://linkedin.com/in/amina-juma-demo",
+      "portfolio_url": null,
+      "photo_url": null,
+      "nationality_visible": false
+    },
+    "summary": "Finance and compliance professional with 6 years of experience supporting AML/CFT controls, IFRS reporting, and branch audit readiness for commercial-banking teams in Tanzania.",
+    "experience": [
+      {
+        "id": "exp_1",
+        "employer": "Kijani Commercial Bank — fictional",
+        "title": "Senior Compliance Analyst",
+        "location": "Dar es Salaam, Tanzania",
+        "start_date": "2022-03",
+        "end_date": null,
+        "is_current": true,
+        "bullets": [
+          "Led AML transaction-monitoring reviews across 40,000 monthly transactions, reducing false-positive escalations by 28%.",
+          "Trained 18 branch colleagues on updated compliance controls, supporting a 100% internal audit pass rate in 2024.",
+          "Automated monthly risk-report consolidation in Power BI, cutting preparation time from 3 days to 1 day."
+        ]
+      },
+      {
+        "id": "exp_2",
+        "employer": "Tazama Advisory — fictional",
+        "title": "Audit Associate",
+        "location": "Dar es Salaam, Tanzania",
+        "start_date": "2019-01",
+        "end_date": "2022-02",
+        "is_current": false,
+        "bullets": [
+          "Conducted financial-control testing for 24 SME clients, identifying 37 remediation actions before year-end reporting.",
+          "Prepared IFRS working papers for TZS 18 billion in client revenue, improving review turnaround by 22%."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "edu_1",
+        "institution": "University of Dar es Salaam",
+        "credential": "Bachelor of Commerce in Accounting",
+        "classification_local": "Upper Second Class Honours",
+        "classification_international_equiv": "Approximate GPA 3.3/4.0 equivalent",
+        "start_date": "2015-10",
+        "end_date": "2018-11",
+        "location": "Dar es Salaam, Tanzania"
+      }
+    ],
+    "certifications": [{ "id": "cert_1", "name": "CPA (T) — demonstration", "issuer": "NBAA", "year": "2023" }],
+    "skills": {
+      "hard_skills": ["AML/CFT", "IFRS", "Power BI", "SQL", "Internal Controls"],
+      "soft_skills": ["Stakeholder Management", "Audit Communication"],
+      "languages": [{ "language": "English", "proficiency": "Fluent (professional)" }, { "language": "Swahili", "proficiency": "Native" }]
+    },
+    "projects": [],
+    "volunteering": [],
+    "referees": [],
+    "settings": { "show_photo": false, "show_referees": false, "date_format": "MMM YYYY", "page_limit_hint": 2 }
+  }
+}

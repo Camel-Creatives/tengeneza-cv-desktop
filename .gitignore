@@ -1,0 +1,25 @@
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+*.test
+*.out
+/wailsjs/
+/frontend/wailsjs/
+/build/
+
+# Frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.next/
+/frontend/.turbo/
+/frontend/*.tsbuildinfo
+
+# Local user data
+*.local.json
+*.db
+*.db-shm
+*.db-wal
+/.tengeneza-data/

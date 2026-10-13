@@ -1,0 +1,276 @@
+openapi: 3.1.0
+info:
+  title: Tengeneza CV Platform API
+  version: 1.0.0
+  description: Tanzania-first API for ATS-safe CV creation, AI drafting, exports, and wallet billing.
+servers:
+  - url: https://api.tengenezacv.online
+    description: Production product API
+  - url: http://localhost:8080
+    description: Local development
+tags:
+  - name: Platform
+  - name: Authentication
+  - name: Profile
+  - name: Templates
+  - name: CVs
+  - name: AI
+  - name: Exports
+  - name: Billing
+  - name: Webhooks
+paths:
+  /healthz:
+    get:
+      tags: [Platform]
+      summary: Liveness probe
+      operationId: healthz
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+  /readyz:
+    get:
+      tags: [Platform]
+      summary: Readiness probe
+      operationId: readyz
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '503': { $ref: '#/components/responses/Error' }
+  /auth/signup:
+    post:
+      tags: [Authentication]
+      summary: Legacy signup endpoint; returns CAMELACCOUNTS_REQUIRED
+      operationId: signup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SignupRequest' }
+      responses:
+        '401': { $ref: '#/components/responses/Error' }
+  /auth/otp/verify:
+    post:
+      tags: [Authentication]
+      summary: Legacy OTP endpoint; returns CAMELACCOUNTS_REQUIRED
+      operationId: verifyOtp
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/VerifyOTPRequest' }
+      responses:
+        '401': { $ref: '#/components/responses/Error' }
+  /auth/otp/resend:
+    post:
+      tags: [Authentication]
+      summary: Legacy OTP endpoint; returns CAMELACCOUNTS_REQUIRED
+      operationId: resendOtp
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, required: [verification_id], properties: { verification_id: { type: string } } }
+      responses:
+        '401': { $ref: '#/components/responses/Error' }
+  /auth/login/password:
+    post:
+      tags: [Authentication]
+      summary: Legacy password endpoint; returns CAMELACCOUNTS_REQUIRED
+      operationId: passwordLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordLoginRequest' }
+      responses:
+        '401': { $ref: '#/components/responses/Error' }
+  /auth/admin/login:
+    post:
+      tags: [Authentication]
+      summary: Sign in the deployment-configured administrator
+      description: Requires ADMIN_LOGIN_EMAIL and ADMIN_LOGIN_PASSWORD configured on the API. Limited to 10 attempts per minute per client IP.
+      operationId: adminPasswordLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordLoginRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '401': { $ref: '#/components/responses/Error' }
+        '429': { $ref: '#/components/responses/Error' }
+        '503': { $ref: '#/components/responses/Error' }
+  /me:
+    get:
+      tags: [Profile]
+      security: [{ bearerAuth: [] }]
+      summary: Get profile, plan, and account context
+      operationId: getMe
+      responses: { '200': { $ref: '#/components/responses/Success' }, '401': { $ref: '#/components/responses/Error' } }
+    patch:
+      tags: [Profile]
+      security: [{ bearerAuth: [] }]
+      summary: Update display name, language, and target region
+      operationId: updateMe
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/ProfileUpdateRequest' } } }
+      responses: { '200': { $ref: '#/components/responses/Success' }, '401': { $ref: '#/components/responses/Error' } }
+  /me/wallet:
+    get:
+      tags: [Profile]
+      security: [{ bearerAuth: [] }]
+      summary: Get server-authoritative export, AI, and voice balances
+      operationId: getWallet
+      responses: { '200': { $ref: '#/components/responses/Success' }, '401': { $ref: '#/components/responses/Error' } }
+  /templates:
+    get:
+      tags: [Templates]
+      security: [{ bearerAuth: [] }]
+      summary: List active templates with per-user lock state
+      operationId: listTemplates
+      responses: { '200': { $ref: '#/components/responses/Success' }, '401': { $ref: '#/components/responses/Error' } }
+  /cvs:
+    get:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      summary: List the caller's active CVs
+      operationId: listCVs
+      responses: { '200': { $ref: '#/components/responses/Success' } }
+    post:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      summary: Create a structured CV
+      operationId: createCV
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/CreateCVRequest' } } }
+      responses: { '201': { $ref: '#/components/responses/Success' }, '400': { $ref: '#/components/responses/Error' } }
+  /cvs/{id}:
+    parameters: [{ $ref: '#/components/parameters/CVID' }]
+    get:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      summary: Get full structured CV content
+      operationId: getCV
+      responses: { '200': { $ref: '#/components/responses/Success' }, '404': { $ref: '#/components/responses/Error' } }
+    patch:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      summary: Patch CV content and create an immutable version
+      operationId: patchCV
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/PatchCVRequest' } } }
+      responses: { '200': { $ref: '#/components/responses/Success' }, '404': { $ref: '#/components/responses/Error' } }
+    delete:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      summary: Archive a CV
+      operationId: archiveCV
+      responses: { '200': { $ref: '#/components/responses/Success' }, '404': { $ref: '#/components/responses/Error' } }
+  /cvs/{id}/duplicate:
+    post:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }]
+      summary: Clone a CV for job-specific tailoring
+      operationId: duplicateCV
+      responses: { '201': { $ref: '#/components/responses/Success' } }
+  /cvs/{id}/versions:
+    get:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }]
+      summary: List immutable CV version history
+      operationId: listCVVersions
+      responses: { '200': { $ref: '#/components/responses/Success' } }
+  /cvs/{id}/versions/{versionID}/restore:
+    post:
+      tags: [CVs]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }, { name: versionID, in: path, required: true, schema: { type: string, format: uuid } }]
+      summary: Restore a previous CV version
+      operationId: restoreCVVersion
+      responses: { '200': { $ref: '#/components/responses/Success' } }
+  /cvs/{id}/agent/ats-score:
+    post:
+      tags: [AI]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }]
+      summary: Run deterministic ATS lint and return a coaching report
+      operationId: scoreATS
+      responses: { '200': { $ref: '#/components/responses/Success' } }
+  /cvs/{id}/agent/autofill-section:
+    post:
+      tags: [AI]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }]
+      summary: Draft a selected CV section through the proxied Ngamia AI gateway
+      operationId: autofillSection
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/AutofillRequest' } } }
+      responses: { '200': { $ref: '#/components/responses/Success' }, '502': { $ref: '#/components/responses/Error' } }
+  /cvs/{id}/export:
+    post:
+      tags: [Exports]
+      security: [{ bearerAuth: [] }]
+      parameters: [{ $ref: '#/components/parameters/CVID' }]
+      summary: Export a caller-owned CV; up to five unique artifacts per Tanzania-local day
+      operationId: exportCV
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/ExportRequest' } } }
+      responses: { '201': { $ref: '#/components/responses/Success' }, '404': { $ref: '#/components/responses/Error' }, '429': { $ref: '#/components/responses/Error' } }
+  /billing/plans:
+    get:
+      tags: [Billing]
+      summary: List public TZS pricing and allowance configuration
+      operationId: listBillingPlans
+      responses: { '200': { $ref: '#/components/responses/Success' } }
+  /webhooks/mailafrica:
+    post:
+      tags: [Webhooks]
+      summary: Receive HMAC-SHA256 verified MailAfrica inbound-email events
+      operationId: mailAfricaWebhook
+      parameters: [{ name: X-Webhook-Signature, in: header, required: true, schema: { type: string } }]
+      requestBody: { required: true, content: { application/json: { schema: { type: object } } } }
+      responses: { '200': { $ref: '#/components/responses/Success' }, '400': { $ref: '#/components/responses/Error' } }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
+  parameters:
+    CVID: { name: id, in: path, required: true, schema: { type: string, format: uuid } }
+  responses:
+    Success:
+      description: Canonical successful response envelope
+      content: { application/json: { schema: { $ref: '#/components/schemas/SuccessEnvelope' } } }
+    Error:
+      description: Canonical API error envelope
+      content: { application/json: { schema: { $ref: '#/components/schemas/ErrorEnvelope' } } }
+  schemas:
+    SuccessEnvelope:
+      type: object
+      required: [success, data, meta]
+      properties: { success: { type: boolean, const: true }, data: {}, meta: { $ref: '#/components/schemas/Meta' } }
+    ErrorEnvelope:
+      type: object
+      required: [success, error, meta]
+      properties: { success: { type: boolean, const: false }, error: { $ref: '#/components/schemas/Error' }, meta: { $ref: '#/components/schemas/Meta' } }
+    Meta:
+      type: object
+      required: [request_id, timestamp]
+      properties: { request_id: { type: string, format: uuid }, timestamp: { type: string, format: date-time } }
+    Error:
+      type: object
+      properties: { code: { type: string, enum: [VALIDATION_ERROR, UNAUTHORIZED, FORBIDDEN, NOT_FOUND, RATE_LIMITED, INSUFFICIENT_CREDITS, INSUFFICIENT_AI_BALANCE, PAYMENT_PENDING, PAYMENT_EXPIRED, PAYMENT_FAILED, TEMPLATE_LOCKED, EXPORT_IN_PROGRESS, RENDER_FAILED, UPSTREAM_AI_ERROR, UPSTREAM_EMAIL_ERROR, UPSTREAM_PAYMENT_ERROR, INTERNAL_ERROR] }, message: { type: string }, details: {} }
+    SignupRequest:
+      type: object
+      required: [full_name]
+      properties: { full_name: { type: string }, email: { type: string, format: email }, phone: { type: string, example: '+255712345678' }, password: { type: string, format: password } }
+    VerifyOTPRequest: { type: object, required: [verification_id, code], properties: { verification_id: { type: string, format: uuid }, code: { type: string, pattern: '^\\d{6}$' } } }
+    PasswordLoginRequest: { type: object, required: [email, password], properties: { email: { type: string, format: email }, password: { type: string, format: password } } }
+    ProfileUpdateRequest: { type: object, properties: { full_name: { type: string }, preferred_language: { type: string, enum: [en, sw] }, target_region: { type: string, enum: [eac, gulf, uk, eu, us, remote_global] } } }
+    CreateCVRequest: { type: object, properties: { title: { type: string }, template_id: { type: string, example: ats_classic }, document_style: { type: string, enum: [resume, cv] }, target_region: { type: string }, language: { type: string, enum: [en, sw] }, content: { type: object } } }
+    PatchCVRequest: { type: object, required: [content], properties: { content: { type: object }, change_summary: { type: string } } }
+    AutofillRequest: { type: object, required: [section], properties: { section: { type: string, enum: [summary, experience, education, skills] }, instruction: { type: string } } }
+    ExportRequest: { type: object, required: [format], properties: { format: { type: string, enum: [pdf, docx, csv] }, language: { type: string, enum: [en, sw] } } }

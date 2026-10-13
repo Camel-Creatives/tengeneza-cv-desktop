@@ -1,0 +1,19 @@
+{
+  "title": "Daniel Kweka — Operations Leadership Resume",
+  "document_style": "resume",
+  "template_id": "executive_ats",
+  "target_region": "gulf",
+  "language": "en",
+  "content": {
+    "personal": {"full_name":"Daniel Kweka","headline":"Operations & Supply Chain Leader","email":"daniel.kweka@example.test","phone":"+255715664433","location":"Mwanza, Tanzania","linkedin_url":"https://linkedin.com/in/daniel-kweka-demo","portfolio_url":null,"photo_url":null},
+    "summary":"Operations leader with 12 years of experience directing FMCG distribution, route-to-market improvements, inventory governance, and frontline teams across Tanzania.",
+    "experience":[
+      {"title":"Regional Operations Manager","employer":"Lake Zone Distribution Group — fictional","location":"Mwanza, Tanzania","start_date":"2020-07","end_date":null,"is_current":true,"bullets":["Directed 86 employees across four depots, improving order fulfilment from 87% to 96%.","Reduced inventory variance by 38% through cycle-count controls and warehouse accountability routines.","Negotiated transport capacity agreements that lowered cost per delivery by 17% across the Lake Zone."]},
+      {"title":"Supply Chain Manager","employer":"Kijiji Foods — fictional","location":"Dodoma, Tanzania","start_date":"2014-02","end_date":"2020-06","is_current":false,"bullets":["Designed demand-planning routines for 1,200 SKUs, reducing stock-outs by 29%.","Led ERP inventory migration for five warehouses, completing implementation four weeks ahead of schedule."]}
+    ],
+    "education":[{"institution":"Sokoine University of Agriculture","credential":"Bachelor of Science in Procurement and Logistics Management","classification_local":"Upper Second Class Honours","start_date":"2009-10","end_date":"2013-11","location":"Morogoro, Tanzania"}],
+    "certifications":[{"name":"Certified Supply Chain Professional — demonstration","issuer":"ASCM","year":"2023"}],
+    "skills":{"hard_skills":["Supply Chain Strategy","Inventory Control","ERP","Fleet Operations","P&L Accountability"],"soft_skills":["People Leadership","Commercial Negotiation"],"languages":[{"language":"English","proficiency":"Fluent (professional)"},{"language":"Swahili","proficiency":"Native"}]},
+    "settings":{"show_photo":false,"show_referees":false}
+  }
+}

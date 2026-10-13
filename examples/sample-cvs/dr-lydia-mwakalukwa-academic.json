@@ -1,0 +1,19 @@
+{
+  "title": "Dr Lydia Mwakalukwa — Academic CV",
+  "document_style": "cv",
+  "template_id": "academic_cv",
+  "target_region": "eu",
+  "language": "en",
+  "content": {
+    "personal": {"full_name":"Dr Lydia Mwakalukwa","headline":"Lecturer & Public Health Researcher","email":"lydia.mwakalukwa@example.test","phone":"+255784771112","location":"Dodoma, Tanzania","linkedin_url":"https://linkedin.com/in/lydia-mwakalukwa-demo","portfolio_url":null,"photo_url":null},
+    "summary":"Public health lecturer and researcher with 9 years of experience in maternal health programme evaluation, mixed-methods research, curriculum design, and peer-reviewed publication support.",
+    "experience":[
+      {"title":"Senior Lecturer","employer":"Central Tanzania Health Institute — fictional","location":"Dodoma, Tanzania","start_date":"2021-01","end_date":null,"is_current":true,"bullets":["Developed epidemiology modules for 180 annual undergraduate students, increasing course completion to 94%.","Led mixed-methods evaluation of maternal-health outreach across 32 facilities, informing three district action plans.","Supervised 18 dissertation projects using ethics-approved data collection and reproducible analysis protocols."]},
+      {"title":"Research Fellow","employer":"Afya Evidence Lab — fictional","location":"Dar es Salaam, Tanzania","start_date":"2016-02","end_date":"2020-12","is_current":false,"bullets":["Conducted household survey analysis for a 4,800-participant immunisation study.","Authored evidence briefs that supported programme decisions in four regional health teams."]}
+    ],
+    "education":[{"institution":"University of Cape Town","credential":"Doctor of Philosophy in Public Health — demonstration","classification_local":"Doctoral degree","start_date":"2012-02","end_date":"2016-01","location":"Cape Town, South Africa"}],
+    "certifications":[{"name":"Research Ethics and Good Clinical Practice — demonstration","issuer":"Global Health Training Centre","year":"2024"}],
+    "skills":{"hard_skills":["Mixed Methods Research","Epidemiology","R","STATA","Curriculum Design"],"soft_skills":["Academic Supervision","Research Communication"],"languages":[{"language":"English","proficiency":"Fluent (professional)"},{"language":"Swahili","proficiency":"Native"}]},
+    "settings":{"show_photo":false,"show_referees":true}
+  }
+}

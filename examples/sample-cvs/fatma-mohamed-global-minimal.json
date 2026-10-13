@@ -1,0 +1,19 @@
+{
+  "title": "Fatma Mohamed — Project Coordination Resume",
+  "document_style": "resume",
+  "template_id": "global_minimal",
+  "target_region": "uk",
+  "language": "en",
+  "content": {
+    "personal": {"full_name":"Fatma Mohamed","headline":"Project Coordination Specialist","email":"fatma.mohamed@example.test","phone":"+255713220110","location":"Dar es Salaam, Tanzania","linkedin_url":"https://linkedin.com/in/fatma-mohamed-demo","portfolio_url":null,"photo_url":null},
+    "summary":"Project coordination specialist with 5 years of experience supporting donor-funded community programmes, vendor delivery, procurement tracking, and practical stakeholder reporting.",
+    "experience":[
+      {"title":"Project Coordinator","employer":"Community Growth Initiative — fictional","location":"Dar es Salaam, Tanzania","start_date":"2022-04","end_date":null,"is_current":true,"bullets":["Coordinated delivery plans for 14 community projects, maintaining 96% on-time milestone completion.","Prepared monthly budget and procurement trackers for TZS 2.4 billion in programme activity.","Facilitated review meetings with 26 partner organisations, resolving 41 delivery risks before escalation."]},
+      {"title":"Programme Assistant","employer":"Mwangaza Partners — fictional","location":"Dar es Salaam, Tanzania","start_date":"2019-01","end_date":"2022-03","is_current":false,"bullets":["Maintained grant documentation for 9 regional programmes, improving audit-file completeness to 99%.","Created bilingual field-report templates that reduced monthly reporting turnaround by 30%."]}
+    ],
+    "education":[{"institution":"Mzumbe University","credential":"Bachelor of Arts in Development Studies","classification_local":"Upper Second Class Honours","start_date":"2015-10","end_date":"2018-11","location":"Morogoro, Tanzania"}],
+    "certifications":[{"name":"PRINCE2 Foundation — demonstration","issuer":"PeopleCert","year":"2024"}],
+    "skills":{"hard_skills":["Project Coordination","Budget Tracking","Procurement","Microsoft Excel","Risk Registers"],"soft_skills":["Stakeholder Communication","Facilitation"],"languages":[{"language":"English","proficiency":"Fluent (professional)"},{"language":"Swahili","proficiency":"Native"}]},
+    "settings":{"show_photo":false,"show_referees":false}
+  }
+}

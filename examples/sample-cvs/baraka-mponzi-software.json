@@ -1,0 +1,57 @@
+{
+  "title": "Baraka Mponzi — Software Engineer Resume",
+  "document_style": "resume",
+  "template_id": "ats_modern",
+  "target_region": "remote_global",
+  "language": "en",
+  "content": {
+    "personal": {
+      "full_name": "Baraka Mponzi",
+      "headline": "Backend Software Engineer",
+      "email": "baraka.mponzi@example.test",
+      "phone": "+255754123456",
+      "location": "Arusha, Tanzania",
+      "linkedin_url": "https://linkedin.com/in/baraka-mponzi-demo",
+      "portfolio_url": "https://baraka-demo.example.test",
+      "photo_url": null,
+      "nationality_visible": false
+    },
+    "summary": "Backend software engineer with 5 years of experience building reliable Go and TypeScript services for payments, logistics, and data products. Experienced with PostgreSQL, Redis, Docker, and API observability for distributed teams.",
+    "experience": [
+      {
+        "id": "exp_1",
+        "employer": "Savanna Systems — fictional",
+        "title": "Backend Software Engineer",
+        "location": "Remote",
+        "start_date": "2023-02",
+        "end_date": null,
+        "is_current": true,
+        "bullets": [
+          "Built Go payment APIs processing 1.2 million monthly requests, maintaining 99.95% availability across 3 regions.",
+          "Reduced PostgreSQL query latency by 46% through index redesign and query-plan profiling for a 90 GB database.",
+          "Implemented OpenTelemetry tracing for 14 services, decreasing mean incident diagnosis time by 35%."
+        ]
+      },
+      {
+        "id": "exp_2",
+        "employer": "Kilimanjaro Digital — fictional",
+        "title": "Software Developer",
+        "location": "Arusha, Tanzania",
+        "start_date": "2020-01",
+        "end_date": "2023-01",
+        "is_current": false,
+        "bullets": [
+          "Developed TypeScript and Node.js integrations for 9 SME clients, increasing successful order synchronization to 98.7%.",
+          "Designed CI pipelines that reduced average release time from 90 minutes to 18 minutes for 6 applications."
+        ]
+      }
+    ],
+    "education": [{ "id": "edu_1", "institution": "Nelson Mandela African Institution of Science and Technology", "credential": "Bachelor of Science in Computer Science", "classification_local": "Upper Second Class Honours", "classification_international_equiv": "Approximate GPA 3.3/4.0 equivalent", "start_date": "2016-10", "end_date": "2019-11", "location": "Arusha, Tanzania" }],
+    "certifications": [{ "id": "cert_1", "name": "AWS Certified Developer — Associate (demonstration)", "issuer": "Amazon Web Services", "year": "2024" }],
+    "skills": { "hard_skills": ["Go", "TypeScript", "PostgreSQL", "Redis", "Docker", "Kubernetes", "REST APIs", "OpenTelemetry"], "soft_skills": ["Remote Collaboration", "Technical Writing"], "languages": [{ "language": "English", "proficiency": "Fluent (professional)" }, { "language": "Swahili", "proficiency": "Native" }] },
+    "projects": [{ "id": "project_1", "name": "Fleet telemetry API — demonstration", "description": "Designed a Go ingestion service for 25,000 daily GPS events with idempotent writes and Grafana metrics." }],
+    "volunteering": [],
+    "referees": [],
+    "settings": { "show_photo": false, "show_referees": false, "date_format": "MMM YYYY", "page_limit_hint": 1 }
+  }
+}

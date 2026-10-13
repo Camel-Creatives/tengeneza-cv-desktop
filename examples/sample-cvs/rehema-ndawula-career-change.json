@@ -1,0 +1,19 @@
+{
+  "title": "Rehema Ndaulwa — Customer Success Resume",
+  "document_style": "resume",
+  "template_id": "career_change",
+  "target_region": "remote_global",
+  "language": "en",
+  "content": {
+    "personal": {"full_name":"Rehema Ndaulwa","headline":"Customer Success Specialist","email":"rehema.ndawula@example.test","phone":"+255768301778","location":"Kampala, Uganda","linkedin_url":"https://linkedin.com/in/rehema-ndawula-demo","portfolio_url":null,"photo_url":null},
+    "summary":"Customer success specialist transitioning from high-volume retail operations into SaaS account support, onboarding, knowledge-base design, and retention-focused customer communication.",
+    "experience":[
+      {"title":"Customer Experience Supervisor","employer":"MarketSquare Retail — fictional","location":"Kampala, Uganda","start_date":"2021-06","end_date":null,"is_current":true,"bullets":["Managed 1,600 monthly customer cases across telephone and WhatsApp channels, maintaining a 4.6/5 satisfaction score.","Created onboarding checklists for 24 new team members, reducing time-to-independence by 35%.","Analyzed recurring complaint themes and implemented service changes that reduced repeat contacts by 21%."]},
+      {"title":"Store Operations Associate","employer":"Urban Basket — fictional","location":"Kampala, Uganda","start_date":"2017-01","end_date":"2021-05","is_current":false,"bullets":["Resolved daily service requests for 200 average walk-in customers while maintaining accurate point-of-sale records.","Trained 16 colleagues on escalation processes, improving first-contact resolution by 18%."]}
+    ],
+    "education":[{"institution":"Makerere University Business School","credential":"Bachelor of Business Administration","classification_local":"Second Class Upper","start_date":"2013-08","end_date":"2016-12","location":"Kampala, Uganda"}],
+    "certifications":[{"name":"Customer Success Foundations — demonstration","issuer":"SuccessCOACHING","year":"2024"}],
+    "skills":{"hard_skills":["Customer Onboarding","CRM","Knowledge Bases","Excel","Service Metrics"],"soft_skills":["Empathy","Written Communication"],"languages":[{"language":"English","proficiency":"Fluent (professional)"},{"language":"Swahili","proficiency":"Fluent (professional)"}]},
+    "settings":{"show_photo":false,"show_referees":false}
+  }
+}
