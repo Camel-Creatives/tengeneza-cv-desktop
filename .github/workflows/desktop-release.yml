@@ -77,7 +77,7 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           mkdir -p dist
-          ditto -c -k --sequesterRsrc --keepParent build/bin/TengenezaCV.app "dist/TengenezaCV-${GITHUB_REF_NAME}-${{ matrix.slug }}.zip"
+          ditto -c -k --sequesterRsrc --keepParent build/bin/tengeneza-cv-desktop.app "dist/TengenezaCV-${GITHUB_REF_NAME}-${{ matrix.slug }}.zip"
 
       - name: Upload platform artifact
         uses: actions/upload-artifact@v4
