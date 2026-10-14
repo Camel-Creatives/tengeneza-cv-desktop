@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { setDesktopAPIBaseURL } from "./lib/api";
 import "./index.css";
+import "./fonts.css";
 
 declare global {
   interface Window {
